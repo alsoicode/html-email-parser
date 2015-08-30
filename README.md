@@ -16,7 +16,7 @@ It is recommended that you symlink parser.py into your /usr/local/bin for ease-o
 
 and set the file to executable:
 
-    sudo +x path/to/parse.py
+    sudo chmod +x path/to/parse.py
 
 The parser will process the contents of the path passed as the first argument:
 
