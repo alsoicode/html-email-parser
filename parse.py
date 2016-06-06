@@ -52,6 +52,17 @@ def parse(return_output=True, file_path=None):
         for td in body_soup.find_all('td'):
             td['style'] = 'text-align: left; vertical-align: top;'
 
+        # add unsubscribe link
+        unsubscribe_row = body_soup.new_tag('tr')
+        unsubscribe_column = body_soup.new_tag('td')
+        unsubscribe_column['style'] = 'text-align: right; vertical-align: top; padding: 10px; font: Arial, Helvetica, sans-serif;'
+        unsubscribe_link = body_soup.new_tag('a')
+        unsubscribe_link.string = 'Unsubscribe'
+        unsubscribe_link['href'] = 'http://riverspirittulsaemail.com/unsubscribe/'
+        unsubscribe_column.append(unsubscribe_link)
+        unsubscribe_row.append(unsubscribe_column)
+        body_soup.find_all('tr')[-1].insert_after(unsubscribe_row)
+
         # right align trouble link text
         body_soup.tr.td['style'] = 'text-align: right; vertical-align: top;'
 
