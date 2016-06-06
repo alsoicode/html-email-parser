@@ -2,7 +2,6 @@
 Converts HTML exported from Adobe Fireworks to old-school HTML for emails.
 
 ## Requirements
- - A Linux distro, like Ubuntu
  - [BeautifulSoup 4](http://www.crummy.com/software/BeautifulSoup/)
  - [Xerox](https://github.com/kennethreitz/xerox)
  - xclip
@@ -10,11 +9,11 @@ Converts HTML exported from Adobe Fireworks to old-school HTML for emails.
 xclip may be installed via: `apt-get install xclip` on Ubuntu
 
 ## Usage
-It is recommended that you symlink parser.py into your /usr/local/bin for ease-of-use.
+It is recommended that you symlink parser.py into your /usr/local/bin for ease-of-use on *nix distros or add the directory for parse.py to your `PATH` environment variable on Windows.
 
     sudo ln -s path/to/parse.py /usr/local/bin
 
-and set the file to executable:
+and set the file to executable (not required for Windows):
 
     sudo chmod +x path/to/parse.py
 
