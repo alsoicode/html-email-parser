@@ -55,7 +55,7 @@ def parse(return_output=True, file_path=None):
         # add unsubscribe link
         unsubscribe_row = body_soup.new_tag('tr')
         unsubscribe_column = body_soup.new_tag('td')
-        unsubscribe_column['style'] = 'text-align: right; vertical-align: top; padding: 10px; font: Arial, Helvetica, sans-serif;'
+        unsubscribe_column['style'] = 'text-align: right; vertical-align: top; padding: 10px; font: 10px Arial, Helvetica, sans-serif;'
         unsubscribe_link = body_soup.new_tag('a')
         unsubscribe_link.string = 'Unsubscribe'
         unsubscribe_link['href'] = 'http://riverspirittulsaemail.com/unsubscribe/'
